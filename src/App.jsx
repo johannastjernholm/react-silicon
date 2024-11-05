@@ -5,6 +5,7 @@ import Brands from "./components/Brands";
 import AppFeatures from "./components/AppFeatures";
 import HowDoesItWork from "./components/HowDoesItWork";
 import FeaturesDesktop from "./components/FeaturesDesktop";
+import ClientReviews from "./components/ClientReviews";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <AppFeatures />
       <HowDoesItWork />
       <FeaturesDesktop />
+      <ClientReviews />
     </>
   );
 }
