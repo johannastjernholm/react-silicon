@@ -3,6 +3,7 @@ import Header from "./components/header";
 import Hero from "./components/Hero";
 import Brands from "./components/Brands";
 import AppFeatures from "./components/AppFeatures";
+import HowDoesItWork from "./components/HowDoesItWork";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Hero />
       <Brands />;
       <AppFeatures />
+      <HowDoesItWork />
     </>
   );
 }
