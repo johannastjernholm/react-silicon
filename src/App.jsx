@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import Brands from "./components/Brands";
 import AppFeatures from "./components/AppFeatures";
 import HowDoesItWork from "./components/HowDoesItWork";
+import FeaturesDesktop from "./components/FeaturesDesktop";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Brands />
       <AppFeatures />
       <HowDoesItWork />
+      <FeaturesDesktop />
     </>
   );
 }
