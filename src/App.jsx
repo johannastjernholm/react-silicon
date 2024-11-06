@@ -7,6 +7,7 @@ import HowDoesItWork from "./components/HowDoesItWork";
 import FeaturesDesktop from "./components/FeaturesDesktop";
 import ClientReviews from "./components/ClientReviews";
 import Faq from "./components/Faq";
+import Newsletter from "./components/Newsletter";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <FeaturesDesktop />
       <ClientReviews />
       <Faq />
+      <Newsletter />
     </>
   );
 }
