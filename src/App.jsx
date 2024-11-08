@@ -9,10 +9,11 @@ import ClientReviews from "./components/ClientReviews";
 import Faq from "./components/Faq";
 import Newsletter from "./components/Newsletter";
 import Footer from "./components/Footer";
+import DarkThemeProvider from "./contexts/ThemeContext";
 
 function App() {
   return (
-    <>
+    <DarkThemeProvider>
       <Header />
       <Hero />
       <Brands />
@@ -23,7 +24,7 @@ function App() {
       <Faq />
       <Newsletter />
       <Footer />
-    </>
+    </DarkThemeProvider>
   );
 }
 
