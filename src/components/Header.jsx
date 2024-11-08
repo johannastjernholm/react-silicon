@@ -1,11 +1,17 @@
+import { useContext } from "react";
+import LogoDark from "/src/assets/images/Logo-darkmode.svg";
+import LogoLight from "/src/assets/images/Logo.svg";
+import { ThemeContext } from "../contexts/ThemeContext";
+
 const Header = () => {
+  const { isDarkMode, toggleDarkMode } = useContext(ThemeContext);
   return (
     <>
       <header>
         <div className="container">
           <a href="index.html" id="logo">
             {" "}
-            <img src="src\assets\images\Logo.svg" alt="Silicon logo" />
+            <img src={isDarkMode ? LogoDark : LogoLight} alt="Silicon logo" />
           </a>
           <nav className="navbar">
             <a href="#" className="nav-link">
@@ -16,7 +22,7 @@ const Header = () => {
           <div className="btn-toggle-switch" id="darkmode-toggle-switch">
             <span className="label">Dark Mode</span>
             <label htmlFor="darkmode-switch" className="toggle-switch">
-              <input type="checkbox" id="darkmode-switch" />
+              <input type="checkbox" id="darkmode-switch" onChange={toggleDarkMode} checked={isDarkMode} />
               <span className="slider round"></span>
             </label>
           </div>

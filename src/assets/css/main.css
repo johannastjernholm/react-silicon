@@ -20,6 +20,31 @@
   --container-padding: 1rem;
   --transition-time: all 0.2s;
 }
+/* DARK MODE */
+body[data-theme="dark"] {
+  background: var(--color-gray-900);
+  color: var(--color-white);
+}
+body[data-theme="dark"] .nav-link {
+  color: var(--color-white);
+}
+body[data-theme="dark"] .fa-regular {
+  color: var(--color-gray-200);
+}
+body[data-theme="dark"] p {
+  color: var(--color-white);
+}
+
+body[data-theme="dark"] .btn-download-app {
+  background: var(--color-gray-200);
+}
+body[data-theme="dark"] span {
+  color: var(--color-white);
+}
+body[data-theme="dark"] .fa-chevron-down {
+  color: var(--color-gray-900);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -79,7 +104,6 @@ a:hover {
   background-color: var(--color-gray-900);
   color: var(--color-white);
   border-radius: 8px;
-  padding: 9px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,9 +114,9 @@ a:hover {
     }
   }
 }
-.btn-download-app:hover {
+/* .btn-download-app:hover {
   background-color: var(--color-gray-800);
-}
+} */
 .btn-mobile {
   background-color: transparent;
   border: none;
@@ -913,7 +937,6 @@ main .hero {
       margin-right: 2.5rem;
     }
     p {
-      color: var(--color-gray-700);
       font-size: 18px;
       margin-bottom: 3rem;
     }

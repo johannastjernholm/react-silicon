@@ -1,4 +1,12 @@
+import GoogleBtndark from "/src/assets/images/googleplayDarkmmode.svg";
+import GoogleBtnLight from "/src/assets/images/googleplayLigthmode.svg";
+import AppleBtnDark from "/src/assets/images/appstoreDarkMode.svg";
+import AppleBtnLight from "/src/assets/images/appstoreLightmode.svg";
+import { useContext } from "react";
+import { ThemeContext } from "../contexts/ThemeContext";
+
 const Hero = () => {
+  const { isDarkMode } = useContext(ThemeContext);
   return (
     <main>
       <section className="hero">
@@ -16,11 +24,19 @@ const Hero = () => {
             </p>
             <div className="buttons">
               <a className="btn-download-app" href="#">
+                <img src={isDarkMode ? AppleBtnDark : AppleBtnLight} alt="" />
+              </a>
+
+              <a className="btn-download-app" href="#">
+                <img src={isDarkMode ? GoogleBtndark : GoogleBtnLight} alt="" />
+              </a>
+              {/* <a className="btn-download-app" href="#">
                 <img src="src\assets\images\appstore-light.svg" alt="" />
               </a>
+
               <a className="btn-download-app" href="#">
                 <img src="src/assets/images/googleplay-light.svg" alt="" />
-              </a>
+              </a> */}
             </div>
 
             <a href="#" className="discover-more">
