@@ -20,7 +20,7 @@
   --container-padding: 1rem;
   --transition-time: all 0.2s;
 }
-/* DARK MODE */
+/* DARK MODE SETTINGS*/
 body[data-theme="dark"] {
   background: var(--color-gray-900);
   color: var(--color-white);
@@ -63,6 +63,12 @@ body[data-theme="dark"] .right {
 body[data-theme="dark"] #newsletter-section,
 body[data-theme="dark"] .input-box {
   background-color: rgba(255, 255, 255, 0.04);
+}
+body[data-theme="dark"] .fa-chevron-up {
+  color: black;
+}
+body[data-theme="dark"] .accordion-button {
+  color: white;
 }
 
 * {
@@ -793,7 +799,7 @@ footer .container {
     }
 
     .accordion-item {
-      background-color: white;
+      background-color: var(--color-white);
       border-radius: 10px;
       margin-bottom: 10px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -801,9 +807,9 @@ footer .container {
     }
 
     .accordion-button {
+      background-color: var(--color-white);
       width: 100%;
-      background-color: white;
-      color: #333;
+      /* color: #333; */
       padding: 15px 20px;
       font-size: 18px;
       font-weight: bold;
@@ -816,8 +822,7 @@ footer .container {
       align-items: center;
     }
 
-    .accordion-button.active {
-      background-color: var(--color-white);
+    .accordion-button .active {
       text-decoration: none;
     }
 

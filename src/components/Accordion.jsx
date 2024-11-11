@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { ThemeContext } from "../contexts/ThemeContext";
 
 const AccordionItem = ({ title, content }) => {
+  const { isDarkMode } = useContext(ThemeContext);
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleAccordion = () => {
@@ -8,8 +10,8 @@ const AccordionItem = ({ title, content }) => {
   };
 
   return (
-    <div className="accordion-item">
-      <button className="accordion-button" onClick={toggleAccordion}>
+    <div className="accordion-item" style={{ backgroundColor: `${isDarkMode ? "#151922" : ""}` }}>
+      <button className="accordion-button" onClick={toggleAccordion} style={{ backgroundColor: `${isDarkMode ? "#151922" : ""}` }}>
         {title}
         <span className="icon-accordion">
           <i className={`fa-solid ${isOpen ? "fa-chevron-up" : "fa-chevron-down"}`}></i>
