@@ -1,3 +1,5 @@
+import Accordion from "./Accordion";
+
 const Faq = () => {
   return (
     <>
@@ -28,80 +30,7 @@ const Faq = () => {
             </div>
           </div>
         </div>
-        <div className="accordion-container">
-          <div className="accordion-item">
-            <button className="accordion-button">
-              Is any of my personal information stored in the App?
-              <span className="icon-accordion">
-                <i className="fa-solid fa-chevron-down"></i>
-              </span>
-            </button>
-            <div className="accordion-content">
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, corrupti.</p>
-            </div>
-          </div>
-          <div className="accordion-item">
-            <button className="accordion-button">
-              What formats can I download my transaction history in?
-              <span className="icon-accordion">
-                <i className="fa-solid fa-chevron-down"></i>
-              </span>
-            </button>
-            <div className="accordion-content">
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-            </div>
-          </div>
-          <div className="accordion-item">
-            <button className="accordion-button">
-              Can I schedule future transfers?
-              <span className="icon-accordion">
-                <i className="fa-solid fa-chevron-down"></i>
-              </span>
-            </button>
-            <div className="accordion-content">
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis voluptatem deleniti provident ducimus laboriosam dolore dignissimos
-                officiis quaerat similique voluptate!
-              </p>
-            </div>
-          </div>
-          <div className="accordion-item">
-            <button className="accordion-button">
-              When can I use Banking App services?
-              <span className="icon-accordion">
-                <i className="fa-solid fa-chevron-down"></i>
-              </span>
-            </button>
-            <div className="accordion-content">
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure ex nostrum laborum qui quos doloremque.</p>
-            </div>
-          </div>
-          <div className="accordion-item">
-            <button className="accordion-button">
-              Can I create my own password that is easy for me to remember?
-              <span className="icon-accordion">
-                <i className="fa-solid fa-chevron-down"></i>
-              </span>
-            </button>
-            <div className="accordion-content">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, nostrum!</p>
-            </div>
-          </div>
-          <div className="accordion-item">
-            <button className="accordion-button">
-              What happens if I forget or lose my password?
-              <span className="icon-accordion">
-                <i className="fa-solid fa-chevron-down"></i>
-              </span>
-            </button>
-            <div className="accordion-content">
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis suscipit quasi, quia aliquid voluptate fugit alias harum itaque atque
-                possimus.
-              </p>
-            </div>
-          </div>
-        </div>
+        <Accordion />
       </section>
     </>
   );
