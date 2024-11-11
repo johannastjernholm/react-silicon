@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "../contexts/ThemeContext";
 
 const AccordionItem = ({ title, content }) => {
@@ -29,32 +29,17 @@ const AccordionItem = ({ title, content }) => {
 };
 
 const Accordion = () => {
-  const accordionData = [
-    {
-      title: "Is any of my personal information stored in the App?",
-      content: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, corrupti.",
-    },
-    {
-      title: "What formats can I download my transaction history in?",
-      content: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-    },
-    {
-      title: "Can I schedule future transfers?",
-      content: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis voluptatem deleniti provident ducimus laboriosam.",
-    },
-    {
-      title: "When can I use Banking App services?",
-      content: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure ex nostrum laborum qui quos doloremque.",
-    },
-    {
-      title: "Can I create my own password that is easy for me to remember?",
-      content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, nostrum!",
-    },
-    {
-      title: "What happens if I forget or lose my password?",
-      content: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis suscipit quasi, quia aliquid voluptate fugit alias.",
-    },
-  ];
+  const [accordionData, setAccordionData] = useState([]);
+
+  const fetchAccordionData = async () => {
+    const res = await fetch("https://win24-assignment.azurewebsites.net/api/faq");
+    const data = await res.json();
+    setAccordionData(data);
+    console.log(data);
+  };
+  useEffect(() => {
+    fetchAccordionData();
+  }, []);
 
   return (
     <div className="accordion-container">
