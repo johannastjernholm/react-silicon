@@ -142,9 +142,9 @@ a:hover {
     }
   }
 }
-/* .btn-download-app:hover {
-  background-color: var(--color-gray-800);
-} */
+.btn-download-app:hover {
+  opacity: 0.5;
+}
 .btn-mobile {
   background-color: transparent;
   border: none;
