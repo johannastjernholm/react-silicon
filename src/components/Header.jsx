@@ -6,7 +6,7 @@ import { ThemeContext } from "../contexts/ThemeContext";
 const Header = () => {
   const { isDarkMode, toggleDarkMode } = useContext(ThemeContext);
   return (
-    <>
+    <div id="id-header">
       <header>
         <div className="container">
           <a href="index.html" id="logo">
@@ -36,7 +36,7 @@ const Header = () => {
           </button>
         </div>
       </header>
-    </>
+    </div>
   );
 };
 
