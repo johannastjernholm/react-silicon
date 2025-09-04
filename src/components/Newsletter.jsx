@@ -30,7 +30,9 @@ const Newsletter = () => {
       <div className="newsletter-container">
         <div className="subscribe">
           <img src="src/assets/images/notification.svg" alt="" />
-          <h4>Subscribe to our newsletter to stay informed about latest updates</h4>
+          <h4>
+            Subscribe to our newsletter <p className="hide">to stay informed about latest updates</p>
+          </h4>
         </div>
         <form
           className="input"
